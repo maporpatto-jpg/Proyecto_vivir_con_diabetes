@@ -1,0 +1,13 @@
+# VS Code
+.vscode/
+
+# SO / cachés
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+
+# Construcciones y temporales
+dist/
+build/
