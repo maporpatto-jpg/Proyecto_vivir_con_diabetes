@@ -3,59 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vivir con Diabetes</title>
-  <!-- Íconos Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <title>Inicio — Vivir con Diabetes</title>
   <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
-  <div class="bg-fondo"></div>
-  <!-- El resto de tu contenido -->
-  <header>
-    <nav>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header role="banner">
+    <nav aria-label="Principal">
       <ul class="menu">
-        <li><a href="index.html"><i class="fa fa-home"></i> Inicio</a></li>
-        <li><a href="que-es-la-diabetes.html"><i class="fa fa-info-circle"></i> Información</a></li>
-        <li><a href="alimentacion.html"><i class="fa fa-apple-alt"></i> Alimentación</a></li>
-        <li><a href="actividad.html"><i class="fa fa-running"></i> Actividad Física</a></li>
-        <li><a href="recursos.html"><i class="fa fa-book"></i> Recursos</a></li>
-        <li><a href="contacto.html"><i class="fa fa-envelope"></i> Contacto</a></li>
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="que-es-la-diabetes.html">¿Qué es la diabetes?</a></li>
+        <li><a href="alimentacion.html">Alimentación</a></li>
+        <li><a href="actividad.html">Actividad</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Vivir con Diabetes</h1>
-        <p>Información, apoyo y comunidad para una vida saludable</p>
-        <p>Un espacio educativo, preventivo y de acompañamiento para quienes viven con diabetes.</p>
-        <a href="que-es-la-diabetes.html" class="btn-accion">Más información</a>
-      </div>
-    </section>
-
-    <section class="bienvenida">
-    <h2>Bienvenido/a</h2>
-      <p>
-        Este sitio está dedicado a brindar información confiable, consejos prácticos y recursos útiles para quienes viven con diabetes y sus familias. Aquí encontrarás apoyo, herramientas y una comunidad comprometida con el bienestar.
-      </p>
-    </section>
-
-    <section class="porque">
-      <h2>¿Por qué este sitio?</h2>
-      <ul>
-        <li><i class="fa fa-heartbeat"></i> Promover la salud y la prevención</li>
-        <li><i class="fa fa-users"></i> Crear una comunidad de apoyo</li>
-        <li><i class="fa fa-lightbulb"></i> Compartir conocimientos y experiencias</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    <div>
-      <p>© 2025 Vivir con Diabetes. Todos los derechos reservados.</p>
-      <p>Porpatto Miguel</p>
+  <main id="contenido" tabindex="-1">
+  <!-- HERO de la portada -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Vivir con Diabetes</h1>
+      <p>Información, apoyo y comunidad para una vida saludable</p>
     </div>
+  </section>
+</main>
+
+
+  <footer role="contentinfo">
+    <small>© 2025 Vivir con Diabetes</small>
   </footer>
+
+  <script src="JS/script.js" defer></script>
 </body>
 </html>

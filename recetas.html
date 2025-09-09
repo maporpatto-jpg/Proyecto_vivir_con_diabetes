@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recetas | Vivir con Diabetes</title>
+  <link rel="preload" href="CSS/style.css" as="style">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="icon" href="img/chica.png" type="image/png">
+  <meta name="description" content="Recetas simples y equilibradas para personas que viven con diabetes. Desayuno, almuerzo, merienda y cena.">
+  <style>
+    .receta-media{display:flex;gap:1rem;align-items:center}
+    .receta-media img{width:160px;height:auto;border-radius:12px;flex:0 0 auto;display:block}
+    @media (max-width:640px){.receta-media{flex-direction:column;align-items:flex-start}}
+    .tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.4rem}
+    .tag{font-size:.85rem;padding:.15rem .5rem;border-radius:999px;background:#eef2ff;border:1px solid #e0e7ff}
+  </style>
+</head>
+<body>
+  <a href="#contenido" class="skip-link">Saltar al contenido principal</a>
+
+  <header>
+    <nav aria-label="Principal">
+      <ul class="nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="que-es-la-diabetes.html">Información</a></li>
+        <li><a href="alimentacion.html">Alimentación</a></li>
+        <li><a href="actividad.html">Actividad</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido" class="contained" tabindex="-1">
+    <nav class="breadcrumbs" aria-label="breadcrumb" style="margin-top:1rem;">
+      <a href="index.html">Inicio</a> <span aria-hidden="true">›</span>
+      <a href="recursos.html">Recursos</a> <span aria-hidden="true">›</span>
+      <span>Recetas</span>
+    </nav>
+
+    <h1>Recetas saludables</h1>
+    <p class="lead">Platos fáciles, ricos y equilibrados. Porciones orientativas y opciones de intercambio.</p>
+
+    <section class="card">
+      <div class="receta-media">
+        <img src="img/receta-desayuno-yogur-avena.jpg" alt="Bowl de yogur natural con fruta y avena">
+        <div>
+          <h2>Desayuno: Yogur con frutas y avena</h2>
+          <p><strong>Ingredientes:</strong> 1 yogur natural, 1 fruta chica, 2 cdas. de avena.</p>
+          <p><strong>Preparación:</strong> Mezclar yogur y avena, sumar fruta.</p>
+          <div class="tags"><span class="tag">Rápido</span><span class="tag">Fibra</span><span class="tag">Sin cocción</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="receta-media">
+        <img src="img/receta-almuerzo-quinoa-pollo.jpg" alt="Bowl de quinoa con pollo y verduras">
+        <div>
+          <h2>Almuerzo: Ensalada tibia de quinoa con pollo</h2>
+          <p><strong>Ingredientes:</strong> ½ taza de quinoa cocida, pollo grillado, verduras, 1 cda. de aceite.</p>
+          <p><strong>Preparación:</strong> Saltear quinoa y verduras, agregar pollo y aceite.</p>
+          <div class="tags"><span class="tag">Equilibrada</span><span class="tag">Proteínas magras</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="receta-media">
+        <img src="img/receta-merienda-tostadas-palta.jpg" alt="Tostadas integrales con palta y tomate">
+        <div>
+          <h2>Merienda: Tostadas integrales con palta y tomate</h2>
+          <p><strong>Ingredientes:</strong> 2 tostadas integrales, ½ palta, tomate, condimentos.</p>
+          <p><strong>Preparación:</strong> Untar palta, sumar tomate y condimentar.</p>
+          <div class="tags"><span class="tag">Fibra</span><span class="tag">Grasa saludable</span><span class="tag">Vegetariana</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="receta-media">
+        <img src="img/receta-cena-salmon-batata-brocoli.jpg" alt="Salmón al horno con batatas y brócoli">
+        <div>
+          <h2>Cena: Salmón al horno con batatas y brócoli</h2>
+          <p><strong>Ingredientes:</strong> Filete chico de salmón, ½ batata, brócoli, 1 cdta. de aceite, limón.</p>
+          <p><strong>Preparación:</strong> Hornear batata 15–20 min; sumar salmón y brócoli 10–12 min. Finalizar con limón.</p>
+          <div class="tags"><span class="tag">Omega-3</span><span class="tag">Horno</span></div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="pager" aria-label="Paginación del contenido">
+      <a href="recursos.html" class="btn">← Volver a Recursos</a>
+    </nav>
+  </main>
+  <section class="referencias contained">
+  <h2>Fuentes de información</h2>
+  <ul>
+    <li>Ministerio de Salud de Argentina. 
+      <a href="https://www.argentina.gob.ar/salud/alimentacion-saludable" target="_blank" rel="noopener">
+        Guías alimentarias
+      </a>
+    </li>
+    <li>American Diabetes Association (ADA). 
+      <a href="https://diabetes.org/food-and-fitness/food" target="_blank" rel="noopener">
+        Food & Recipes
+      </a>
+    </li>
+  </ul>
+</section>
+
+
+  <footer>
+    <div class="contained footer-inner">
+      <p>© <span id="anio"></span> Vivir con Diabetes — Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="JS/script.js" defer></script>
+  <script>
+    document.getElementById('anio').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

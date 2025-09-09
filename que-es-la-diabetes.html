@@ -1,40 +1,161 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="pg-diabetes">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>¿Qué es la diabetes? — Vivir con Diabetes</title>
   <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
-  <header>
-    <nav>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header role="banner">
+    <nav aria-label="Principal">
       <ul class="menu">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="que-es-la-diabetes.html">Información</a></li>
+        <li><a href="que-es-la-diabetes.html" aria-current="page">¿Qué es la diabetes?</a></li>
         <li><a href="alimentacion.html">Alimentación</a></li>
-        <li><a href="actividad.html">Actividad Física</a></li>
+        <li><a href="actividad.html">Actividad</a></li>
         <li><a href="recursos.html">Recursos</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <main style="padding-top: 70px;">
-    <section class="bienvenida">
-      <h1>¿Qué es la diabetes?</h1>
-      <p>Introducción simple para entender los tipos, síntomas y manejo.</p>
-      <ol style="margin-top:1rem; text-align:left; max-width:700px; margin-inline:auto;">
-        <li>Tipos: tipo 1, tipo 2, gestacional.</li>
-        <li>Chequeos: glucemia, A1c, controles periódicos.</li>
-        <li>Tríada: alimentación + actividad + medicación (si corresponde).</li>
-      </ol>
+  <main id="contenido" tabindex="-1">
+    <!-- Encabezado local -->
+    <section class="page-hero">
+      <div class="contained">
+        <h2>¿Qué es la diabetes?</h2>
+        <p>Conceptos claros para entender la condición y tomar mejores decisiones.</p>
+      </div>
+    </section>
+
+    <!-- Índice -->
+    <nav class="toc" aria-label="Índice de esta página">
+      <div class="contained">
+        <strong>En esta página:</strong>
+        <a href="#definicion">Definición</a>
+        <a href="#tipos">Tipos de diabetes</a>
+        <a href="#signos">Signos y síntomas</a>
+        <a href="#diagnostico">Diagnóstico</a>
+        <a href="#tratamiento">Tratamiento</a>
+        <a href="#mitos">Mitos</a>
+      </div>
+    </nav>
+
+    <!-- Contenido -->
+    <section id="definicion" class="section contained">
+      <h3>Definición</h3>
+      <p>
+        La <strong>diabetes</strong> es una condición crónica en la que los niveles de glucosa en sangre
+        se encuentran elevados por una alteración en la producción o utilización de insulina.
+      </p>
+      <p class="note">Este sitio es educativo y no reemplaza la consulta con profesionales de la salud.</p>
+    </section>
+
+    <section id="tipos" class="section contained">
+      <h3>Tipos de diabetes</h3>
+      <div class="grid two">
+        <article class="card">
+          <h4>Tipo 1</h4>
+          <p>De origen autoinmune, requiere insulina desde el diagnóstico.</p>
+        </article>
+        <article class="card">
+          <h4>Tipo 2</h4>
+          <p>Más frecuente, relacionada con resistencia a la insulina y hábitos de vida.</p>
+        </article>
+        <article class="card">
+          <h4>Gestacional</h4>
+          <p>Aparece en el embarazo, con riesgos para madre y bebé.</p>
+        </article>
+        <article class="card">
+          <h4>Otros tipos</h4>
+          <p>Incluyen formas monogénicas y secundarias a otras enfermedades.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="signos" class="section contained">
+      <h3>Signos y síntomas</h3>
+      <ul class="list-check">
+        <li>Polidipsia y poliuria</li>
+        <li>Visión borrosa</li>
+        <li>Cansancio</li>
+        <li>Pérdida de peso inexplicada</li>
+      </ul>
+    </section>
+
+    <section id="diagnostico" class="section contained">
+      <h3>Diagnóstico</h3>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Prueba</th>
+              <th>Normal</th>
+              <th>Prediabetes</th>
+              <th>Diabetes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Glucemia en ayunas</td>
+              <td>&lt; 100 mg/dL</td>
+              <td>100–125 mg/dL</td>
+              <td>≥ 126 mg/dL</td>
+            </tr>
+            <tr>
+              <td>HbA1c</td>
+              <td>&lt; 5.7%</td>
+              <td>5.7–6.4%</td>
+              <td>≥ 6.5%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="tratamiento" class="section contained">
+      <h3>Tratamiento</h3>
+      <div class="grid two">
+        <div class="card">
+          <h4>Hábitos</h4>
+          <ul class="list-check">
+            <li>Alimentación saludable</li>
+            <li>Actividad física</li>
+            <li>Buen descanso</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Terapias</h4>
+          <p>Incluye educación, medicación oral y/o insulina.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="mitos" class="section contained">
+      <h3>Mitos</h3>
+      <details class="faq">
+        <summary>No puedo comer carbohidratos</summary>
+        <p>Se pueden incluir de forma planificada.</p>
+      </details>
+    </section>
+
+    <!-- Referencias -->
+    <section class="referencias contained">
+      <h2>Referencias</h2>
+      <ul>
+        <li>OMS. <a href="https://www.who.int/es/health-topics/diabetes" target="_blank" rel="noopener">Diabetes</a>.</li>
+        <li>ADA. <a href="https://diabetes.org" target="_blank" rel="noopener">American Diabetes Association</a>.</li>
+        <li>Ministerio de Salud Argentina. <a href="https://www.argentina.gob.ar/salud" target="_blank" rel="noopener">Guías alimentarias</a>.</li>
+        <li>SAD. <a href="https://sad.org.ar/" target="_blank" rel="noopener">Sociedad Argentina de Diabetes</a>.</li>
+      </ul>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Vivir con Diabetes. Todos los derechos reservados.</p>
+  <footer role="contentinfo">
+    <small>© 2025 Vivir con Diabetes</small>
   </footer>
-  <script src="JS/script.js"></script>
 </body>
 </html>

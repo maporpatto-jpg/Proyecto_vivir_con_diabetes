@@ -2,39 +2,83 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Actividad Física — Vivir con Diabetes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Actividad — Vivir con Diabetes</title>
   <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
-  <header>
-    <nav>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header role="banner">
+    <nav aria-label="Principal">
       <ul class="menu">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="que-es-la-diabetes.html">Información</a></li>
+        <li><a href="que-es-la-diabetes.html">¿Qué es la diabetes?</a></li>
         <li><a href="alimentacion.html">Alimentación</a></li>
-        <li><a href="actividad.html">Actividad Física</a></li>
+        <li><a href="actividad.html" aria-current="page">Actividad</a></li>
         <li><a href="recursos.html">Recursos</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <main style="padding-top: 70px;">
-    <section class="bienvenida">
-      <h1>Actividad Física</h1>
-      <p>Ideas y rutinas seguras para moverte todos los días.</p>
-      <ul style="margin-top:1rem; text-align:left; max-width:700px; margin-inline:auto;">
-        <li>Caminatas moderadas (20–30 min).</li>
-        <li>Fuerza con peso corporal (2–3 veces por semana).</li>
-        <li>Estiramientos suaves post-actividad.</li>
+  <main id="contenido" tabindex="-1">
+    <section class="page-header contained">
+      <h1>Actividad física</h1>
+      <p class="lead">Movimiento regular para mejorar la salud y el control glucémico.</p>
+    </section>
+
+    <section class="contained">
+      <h2>Plan semanal orientativo</h2>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Día</th>
+              <th>Cardio</th>
+              <th>Fuerza</th>
+              <th>Movilidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lunes</td><td>Caminata 30 min</td><td>—</td><td>5–10 min</td>
+            </tr>
+            <tr>
+              <td>Martes</td><td>Bici 20 min</td><td>Rutina A</td><td>5 min</td>
+            </tr>
+            <tr>
+              <td>Miércoles</td><td>Caminata 40 min</td><td>—</td><td>10 min</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Este plan es de ejemplo, adaptalo con tu equipo de salud.</p>
+    </section>
+
+    <section class="contained">
+      <h2>Seguridad</h2>
+      <ul class="list-check">
+        <li>Calentá y enfriá siempre.</li>
+        <li>Usá calzado cómodo.</li>
+        <li>Llevá identificación médica.</li>
+      </ul>
+    </section>
+
+    <!-- Referencias -->
+    <section class="referencias contained">
+      <h2>Referencias</h2>
+      <ul>
+        <li>OMS. <a href="https://www.who.int/es/health-topics/diabetes" target="_blank" rel="noopener">Diabetes</a>.</li>
+        <li>ADA. <a href="https://diabetes.org" target="_blank" rel="noopener">American Diabetes Association</a>.</li>
+        <li>Ministerio de Salud Argentina. <a href="https://www.argentina.gob.ar/salud" target="_blank" rel="noopener">Guías alimentarias</a>.</li>
+        <li>SAD. <a href="https://sad.org.ar/" target="_blank" rel="noopener">Sociedad Argentina de Diabetes</a>.</li>
       </ul>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Vivir con Diabetes. Todos los derechos reservados.</p>
+  <footer role="contentinfo">
+    <small>© 2025 Vivir con Diabetes</small>
   </footer>
-  <script src="JS/script.js"></script>
 </body>
 </html>

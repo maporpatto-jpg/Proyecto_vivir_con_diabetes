@@ -2,40 +2,110 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contacto — Vivir con Diabetes</title>
   <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
-  <header>
-    <nav>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header role="banner">
+    <nav aria-label="Principal">
       <ul class="menu">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="que-es-la-diabetes.html">Información</a></li>
+        <li><a href="que-es-la-diabetes.html">¿Qué es la diabetes?</a></li>
         <li><a href="alimentacion.html">Alimentación</a></li>
-        <li><a href="actividad.html">Actividad Física</a></li>
+        <li><a href="actividad.html">Actividad</a></li>
         <li><a href="recursos.html">Recursos</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <main style="padding-top: 70px;">
-    <section class="bienvenida">
-      <h1>Contacto</h1>
-      <p>Escribinos tu consulta.</p>
-      <form style="max-width:700px; margin:1rem auto; text-align:left;">
-        <label>Nombre<br/><input type="text" style="width:100%;padding:.6rem;margin:.3rem 0;"></label>
-        <label>Email<br/><input type="email" style="width:100%;padding:.6rem;margin:.3rem 0;"></label>
-        <label>Mensaje<br/><textarea rows="5" style="width:100%;padding:.6rem;margin:.3rem 0;"></textarea></label>
-        <button class="btn-accion" type="submit">Enviar</button>
-      </form>
+  <main id="contenido" tabindex="-1">
+    <section class="contacto" aria-labelledby="titulo-contacto">
+      <div class="container">
+        <h1 id="titulo-contacto">Contacto</h1>
+        <p class="lead">Escribinos y te respondemos a la brevedad. Los campos marcados con * son obligatorios.</p>
+
+        <form id="contact-form" novalidate aria-describedby="contacto-ayuda">
+          <p id="contacto-ayuda" class="sr-only">
+            Usá la tecla Tab para moverte por los campos. Campos obligatorios marcados con asterisco.
+          </p>
+
+          <div class="field">
+            <label for="nombre">Nombre y apellido *</label>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" required minlength="2" maxlength="80" />
+            <small class="hint">Ej.: Ana Gómez</small>
+            <div class="error" id="error-nombre" role="alert" aria-live="polite"></div>
+          </div>
+
+          <div class="field">
+            <label for="email">Correo electrónico *</label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+            <small class="hint">Ej.: nombre@dominio.com</small>
+            <div class="error" id="error-email" role="alert" aria-live="polite"></div>
+          </div>
+
+          <div class="field">
+            <label for="telefono">Teléfono (opcional)</label>
+            <input type="tel" id="telefono" name="telefono" inputmode="tel" pattern="[0-9+\-\s()]{6,20}" autocomplete="tel" />
+            <small class="hint">Podés incluir prefijo, espacios o guiones.</small>
+            <div class="error" id="error-telefono" role="alert" aria-live="polite"></div>
+          </div>
+
+          <div class="field">
+            <label for="asunto">Asunto *</label>
+            <select id="asunto" name="asunto" required>
+              <option value="" hidden>Elegí una opción</option>
+              <option>Consulta general</option>
+              <option>Pedir turno con nutrición</option>
+              <option>Recursos educativos</option>
+              <option>Otras consultas</option>
+            </select>
+            <div class="error" id="error-asunto" role="alert" aria-live="polite"></div>
+          </div>
+
+          <div class="field">
+            <label for="mensaje">Mensaje *</label>
+            <textarea id="mensaje" name="mensaje" required minlength="10" maxlength="2000" rows="6"></textarea>
+            <small class="hint">Contanos en qué podemos ayudarte.</small>
+            <div class="error" id="error-mensaje" role="alert" aria-live="polite"></div>
+          </div>
+
+          <div class="field checkbox">
+            <input type="checkbox" id="acepto" name="acepto" required />
+            <label for="acepto">Acepto el tratamiento de mis datos para responder esta consulta *</label>
+            <div class="error" id="error-acepto" role="alert" aria-live="polite"></div>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn">Enviar</button>
+            <button type="reset" class="btn btn-secondary">Limpiar</button>
+          </div>
+
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
     </section>
+
+    <!-- Modal de confirmación -->
+    <div class="modal" id="confirm-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+      <div class="modal-content" role="document">
+        <h2 id="modal-title">¡Mensaje enviado!</h2>
+        <p>Gracias por contactarnos. Recibirás una respuesta a la brevedad.</p>
+        <div class="modal-actions">
+          <button type="button" class="btn" id="modal-close">Cerrar</button>
+          <a href="index.html" class="btn btn-secondary" id="modal-home">Ir a Inicio</a>
+        </div>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Vivir con Diabetes. Todos los derechos reservados.</p>
+  <footer role="contentinfo">
+    <small>© 2025 Vivir con Diabetes</small>
   </footer>
-  <script src="JS/script.js"></script>
+
+  <script src="JS/script.js" defer></script>
 </body>
 </html>

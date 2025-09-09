@@ -2,40 +2,138 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Alimentación — Vivir con Diabetes</title>
   <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
-  <header>
-    <nav>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header role="banner">
+    <nav aria-label="Principal">
       <ul class="menu">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="que-es-la-diabetes.html">Información</a></li>
-        <li><a href="alimentacion.html">Alimentación</a></li>
-        <li><a href="actividad.html">Actividad Física</a></li>
+        <li><a href="que-es-la-diabetes.html">¿Qué es la diabetes?</a></li>
+        <li><a href="alimentacion.html" aria-current="page">Alimentación</a></li>
+        <li><a href="actividad.html">Actividad</a></li>
         <li><a href="recursos.html">Recursos</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <main style="padding-top: 70px;">
-    <section class="bienvenida">
-      <h1>Alimentación</h1>
-      <p>Guías prácticas para armar platos equilibrados.</p>
-      <ul style="margin-top:1rem; text-align:left; max-width:700px; margin-inline:auto;">
-        <li>Mitad del plato: verduras.</li>
-        <li>¼ proteínas (huevo, carnes magras, legumbres).</li>
-        <li>¼ carbohidratos de buena calidad (integrales, papa, legumbres).</li>
+  <main id="contenido" tabindex="-1" class="tablas">
+    <section class="page-header contained" aria-labelledby="h1-alim">
+      <h1 id="h1-alim">Alimentación</h1>
+      <p class="lead">Ideas prácticas y equilibradas para el día a día.</p>
+    </section>
+
+    <!-- Sugerencias rápidas -->
+    <section class="contained grid-2" aria-labelledby="tips">
+      <div>
+        <h2 id="tips" class="h3">Claves rápidas</h2>
+        <ul class="list-check">
+          <li>Elegí alimentos frescos y de temporada.</li>
+          <li>Priorizá integrales y legumbres.</li>
+          <li>Combiná hidratos, proteínas y grasas saludables.</li>
+          <li>Tomá agua como bebida principal.</li>
+        </ul>
+      </div>
+      <aside class="sidebar">
+        <div class="card">
+          <strong>Consejo:</strong>
+          <p>Armá tu lista de compras con base en un menú semanal para optimizar tiempo y presupuesto.</p>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Galería de recetas -->
+    <section class="contained" aria-labelledby="recetas">
+      <h2 id="recetas" class="h3">Recetas sugeridas</h2>
+      <div class="menu-grid">
+        <figure class="menu-block">
+          <img src="img/receta-desayuno-yogur-avena.jpg" alt="Vaso con yogur natural, avena y frutas" />
+          <figcaption><strong>Desayuno:</strong> Yogur + avena + frutas</figcaption>
+        </figure>
+        <figure class="menu-block">
+          <img src="img/receta-almuerzo-quinoa-pollo.jpg" alt="Plato de quinoa con pollo y verduras a color" />
+          <figcaption><strong>Almuerzo:</strong> Quinoa con pollo y verduras</figcaption>
+        </figure>
+        <figure class="menu-block">
+          <img src="img/receta-merienda-tostadas-palta.jpg" alt="Tostadas integrales con palta fresca" />
+          <figcaption><strong>Merienda:</strong> Tostadas integrales con palta</figcaption>
+        </figure>
+        <figure class="menu-block">
+          <img src="img/receta-cena-salmon-batata-brocoli.jpg" alt="Salmón con brócoli y batata asada" />
+          <figcaption><strong>Cena:</strong> Salmón + brócoli + batata</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Tabla de ejemplo -->
+    <section class="contained">
+      <h2 class="h3">Ejemplo de equilibrio por comida</h2>
+      <div class="table-wrap" role="region" aria-label="Equilibrio por comida" tabindex="0">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Comida</th>
+              <th>Hidratos (aprox.)</th>
+              <th>Proteínas</th>
+              <th>Grasas saludables</th>
+              <th>Fibra</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Desayuno</th>
+              <td>Fruta / avena</td>
+              <td>Yogur / leche</td>
+              <td>Semillas (opcional)</td>
+              <td>Fruta / avena</td>
+            </tr>
+            <tr>
+              <th scope="row">Almuerzo</th>
+              <td>Quinoa / arroz integral</td>
+              <td>Pollo / legumbres</td>
+              <td>Aceite de oliva</td>
+              <td>Verduras variadas</td>
+            </tr>
+            <tr>
+              <th scope="row">Merienda</th>
+              <td>Pan integral</td>
+              <td>Queso untable / huevo (opcional)</td>
+              <td>Palta</td>
+              <td>Pan integral</td>
+            </tr>
+            <tr>
+              <th scope="row">Cena</th>
+              <td>Batata / legumbres</td>
+              <td>Pescado / pollo</td>
+              <td>Aceite de oliva / frutos secos</td>
+              <td>Brócoli / ensalada</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Los ejemplos son orientativos y deben adaptarse con tu equipo de salud.</p>
+    </section>
+
+    <!-- Referencias -->
+    <section class="referencias contained">
+      <h2>Referencias</h2>
+      <ul>
+        <li>Organización Mundial de la Salud (OMS). <a href="https://www.who.int/es/health-topics/diabetes" target="_blank" rel="noopener">Diabetes – temas de salud</a>.</li>
+        <li>Asociación Americana de Diabetes (ADA). <a href="https://diabetes.org" target="_blank" rel="noopener">Recursos sobre nutrición y diabetes</a>.</li>
+        <li>Ministerio de Salud de Argentina. <a href="https://www.argentina.gob.ar/salud" target="_blank" rel="noopener">Guías alimentarias para la población</a>.</li>
       </ul>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Vivir con Diabetes. Todos los derechos reservados.</p>
+  <footer role="contentinfo">
+    <small>© 2025 Vivir con Diabetes</small>
   </footer>
-  <script src="JS/script.js"></script>
+
+  <script src="JS/script.js" defer></script>
 </body>
 </html>
-
