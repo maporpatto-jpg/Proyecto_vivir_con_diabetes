@@ -67,7 +67,7 @@
   setHeaderVar();
 })();
 
-/* ===== Validación accesible del formulario + modal de confirmación ===== */
+/* ===== Validación accesible del formulario + envío nativo (sin AJAX) ===== */
 (() => {
   const form = document.getElementById('contact-form');
   if (!form) return;
@@ -143,6 +143,7 @@
   fields.mensaje.addEventListener('input', validateMensaje);
   fields.acepto.addEventListener('change', validateAcepto);
 
+  // Envío nativo (sin fetch): si valida, dejamos que el navegador haga el POST
   form.addEventListener('submit', (e) => {
     const validators = [
       validateNombre, validateEmail, validateTelefono,
@@ -167,17 +168,12 @@
       return;
     }
 
-    // Simulación de envío + modal de confirmación (sin backend)
-    e.preventDefault();
-    status.textContent = '¡Formulario válido! Enviando...';
-    setTimeout(() => {
-      status.textContent = '';
-      openConfirmModal();
-      form.reset();
-    }, 300);
+    // Importante: NO hacemos preventDefault si todo está OK.
+    // El navegador enviará el formulario a Formspree y se verá su página de “Gracias”.
+    status.textContent = 'Enviando...';
   });
 
-  // ===== Modal accesible =====
+  // (Dejamos el modal por si en el futuro volvemos a AJAX)
   function openConfirmModal() {
     const modal = document.getElementById('confirm-modal');
     if (!modal) return;
@@ -185,13 +181,11 @@
     const prev = document.activeElement;
     modal.hidden = false;
 
-    // elementos enfocables dentro del modal
     const focusables = modal.querySelectorAll('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
     const first = focusables[0];
     const last = focusables[focusables.length - 1];
     (first || modal).focus();
 
-    // cerrar
     const btnClose = modal.querySelector('#modal-close');
     function close() {
       modal.hidden = true;
@@ -200,17 +194,15 @@
       modal.removeEventListener('click', onBackdrop);
       btnClose?.removeEventListener('click', close);
     }
-
     function onKeyDown(ev) {
       if (ev.key === 'Escape') { ev.preventDefault(); close(); }
       if (ev.key === 'Tab' && focusables.length) {
-        // trap del foco
         if (ev.shiftKey && document.activeElement === first) { ev.preventDefault(); last.focus(); }
         else if (!ev.shiftKey && document.activeElement === last) { ev.preventDefault(); first.focus(); }
       }
     }
     function onBackdrop(ev) {
-      if (ev.target === modal) close(); // click fuera cierra
+      if (ev.target === modal) close();
     }
 
     btnClose?.addEventListener('click', close);

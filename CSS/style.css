@@ -79,7 +79,7 @@ footer{
   display:flex; align-items:center; justify-content:center;
   padding:.5rem 1rem;
   font-weight:600;
-  margin-top: 2rem; /* aire respecto al contenido anterior */
+  margin-top: 0; /* aire respecto al contenido anterior */
 }
 
 /* Responsivo */
