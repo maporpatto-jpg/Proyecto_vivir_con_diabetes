@@ -14,23 +14,52 @@
     @media (max-width:640px){.receta-media{flex-direction:column;align-items:flex-start}}
     .tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.4rem}
     .tag{font-size:.85rem;padding:.15rem .5rem;border-radius:999px;background:#eef2ff;border:1px solid #e0e7ff}
+
+    /* ==== Botones de compartir ==== */
+    .share {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin-top: .5rem;
+      align-items: center;
+    }
+    .share span {
+      font-weight: 600;
+      margin-right: .25rem;
+    }
+    .share a {
+      padding: .3rem .7rem;
+      border-radius: 999px;
+      background: #e0f2f1;
+      color: #0a4b43;
+      text-decoration: none;
+      font-size: .85rem;
+      transition: background .2s;
+    }
+    .share a:hover {
+      background: #b2dfdb;
+    }
   </style>
 </head>
 <body>
   <a href="#contenido" class="skip-link">Saltar al contenido principal</a>
 
-  <header>
+  <header role="banner">
+  <div class="contained">
     <nav aria-label="Principal">
-      <ul class="nav">
+      <ul class="menu"> <!-- 👈 usar .menu -->
         <li><a href="index.html">Inicio</a></li>
         <li><a href="que-es-la-diabetes.html">Información</a></li>
         <li><a href="alimentacion.html">Alimentación</a></li>
         <li><a href="actividad.html">Actividad</a></li>
         <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="recetas.html" aria-current="page">Recetas</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
-  </header>
+  </div>
+</header>
+
 
   <main id="contenido" class="contained" tabindex="-1">
     <nav class="breadcrumbs" aria-label="breadcrumb" style="margin-top:1rem;">
@@ -42,6 +71,7 @@
     <h1>Recetas saludables</h1>
     <p class="lead">Platos fáciles, ricos y equilibrados. Porciones orientativas y opciones de intercambio.</p>
 
+    <!-- Receta 1 -->
     <section class="card">
       <div class="receta-media">
         <img src="img/receta-desayuno-yogur-avena.jpg" alt="Bowl de yogur natural con fruta y avena">
@@ -52,8 +82,18 @@
           <div class="tags"><span class="tag">Rápido</span><span class="tag">Fibra</span><span class="tag">Sin cocción</span></div>
         </div>
       </div>
+      <div class="share">
+        <span>Compartir:</span>
+        <a href="https://api.whatsapp.com/send?text=Receta%20Yogur%20con%20frutas%20y%20avena%20-%20Vivir%20con%20Diabetes%20https://maporpatto-jpg.github.io/Proyecto_vivir_con_diabetes/recetas.html"
+           target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://twitter.com/intent/tweet?text=Receta%20Yogur%20con%20frutas%20y%20avena&url=https://maporpatto-jpg.github.io/Proyecto_vivir_con_diabetes/recetas.html"
+           target="_blank" rel="noopener">X</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://maporpatto-jpg.github.io/Proyecto_vivir_con_diabetes/recetas.html"
+           target="_blank" rel="noopener">Facebook</a>
+      </div>
     </section>
 
+    <!-- Receta 2 -->
     <section class="card">
       <div class="receta-media">
         <img src="img/receta-almuerzo-quinoa-pollo.jpg" alt="Bowl de quinoa con pollo y verduras">
@@ -64,8 +104,18 @@
           <div class="tags"><span class="tag">Equilibrada</span><span class="tag">Proteínas magras</span></div>
         </div>
       </div>
+      <div class="share">
+        <span>Compartir:</span>
+        <a href="https://api.whatsapp.com/send?text=Receta%20Quinoa%20con%20pollo%20-%20Vivir%20con%20Diabetes%20https://maporpatto-jpg.github.io/Proyecto_vivir_con_diabetes/recetas.html"
+           target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://twitter.com/intent/tweet?text=Receta%20Quinoa%20con%20pollo&url=https://maporpatto-jpg.github.io/Proyecto_vivir_con_diabetes/recetas.html"
+           target="_blank" rel="noopener">X</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://maporpatto-jpg.github.io/Proyecto_vivir_con_diabetes/recetas.html"
+           target="_blank" rel="noopener">Facebook</a>
+      </div>
     </section>
 
+    <!-- Receta 3 -->
     <section class="card">
       <div class="receta-media">
         <img src="img/receta-merienda-tostadas-palta.jpg" alt="Tostadas integrales con palta y tomate">
@@ -76,8 +126,18 @@
           <div class="tags"><span class="tag">Fibra</span><span class="tag">Grasa saludable</span><span class="tag">Vegetariana</span></div>
         </div>
       </div>
+      <div class="share">
+        <span>Compartir:</span>
+        <a href="https://api.whatsapp.com/send?text=Receta%20Tostadas%20con%20palta%20-%20Vivir%20con%20Diabetes%20https://maporpatto-jpg.github.io/Proyecto_vivir_con_diabetes/recetas.html"
+           target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://twitter.com/intent/tweet?text=Receta%20Tostadas%20con%20palta&url=https://maporpatto-jpg.github.io/Proyecto_vivir_con_diabetes/recetas.html"
+           target="_blank" rel="noopener">X</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://maporpatto-jpg.github.io/Proyecto_vivir_con_diabetes/recetas.html"
+           target="_blank" rel="noopener">Facebook</a>
+      </div>
     </section>
 
+    <!-- Receta 4 -->
     <section class="card">
       <div class="receta-media">
         <img src="img/receta-cena-salmon-batata-brocoli.jpg" alt="Salmón al horno con batatas y brócoli">
@@ -88,28 +148,37 @@
           <div class="tags"><span class="tag">Omega-3</span><span class="tag">Horno</span></div>
         </div>
       </div>
+      <div class="share">
+        <span>Compartir:</span>
+        <a href="https://api.whatsapp.com/send?text=Receta%20Salmon%20con%20batata%20y%20brocoli%20-%20Vivir%20con%20Diabetes%20https://maporpatto-jpg.github.io/Proyecto_vivir_con_diabetes/recetas.html"
+           target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://twitter.com/intent/tweet?text=Receta%20Salmon%20con%20batata%20y%20brocoli&url=https://maporpatto-jpg.github.io/Proyecto_vivir_con_diabetes/recetas.html"
+           target="_blank" rel="noopener">X</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://maporpatto-jpg.github.io/Proyecto_vivir_con_diabetes/recetas.html"
+           target="_blank" rel="noopener">Facebook</a>
+      </div>
     </section>
 
     <nav class="pager" aria-label="Paginación del contenido">
       <a href="recursos.html" class="btn">← Volver a Recursos</a>
     </nav>
   </main>
-  <section class="referencias contained">
-  <h2>Fuentes de información</h2>
-  <ul>
-    <li>Ministerio de Salud de Argentina. 
-      <a href="https://www.argentina.gob.ar/salud/alimentacion-saludable" target="_blank" rel="noopener">
-        Guías alimentarias
-      </a>
-    </li>
-    <li>American Diabetes Association (ADA). 
-      <a href="https://diabetes.org/food-and-fitness/food" target="_blank" rel="noopener">
-        Food & Recipes
-      </a>
-    </li>
-  </ul>
-</section>
 
+  <section class="referencias contained">
+    <h2>Fuentes de información</h2>
+    <ul>
+      <li>Ministerio de Salud de Argentina. 
+        <a href="https://www.argentina.gob.ar/salud/alimentacion-saludable" target="_blank" rel="noopener">
+          Guías alimentarias
+        </a>
+      </li>
+      <li>American Diabetes Association (ADA). 
+        <a href="https://diabetes.org/food-and-fitness/food" target="_blank" rel="noopener">
+          Food & Recipes
+        </a>
+      </li>
+    </ul>
+  </section>
 
   <footer>
     <div class="contained footer-inner">
