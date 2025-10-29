@@ -444,3 +444,65 @@ header .main-nav a.active { text-decoration: underline; }
 /* Fix extra para el menú */
 .menu a,
 .menu a:visited { color:#fff; }
+.footer-row .sep {
+  color: #b2dfdb;
+}
+
+.footlink {
+  color: #b2dfdb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footlink:hover {
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+/* Fix extra para el menú */
+.menu a,
+.menu a:visited { color:#fff; }
+/* ===== Ícono de Instagram en el footer ===== */
+.footer-row svg {
+  vertical-align: middle;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.footer-row svg:hover {
+  transform: scale(1.1);
+  opacity: .85;
+}
+/* ===== Video responsivo (reutilizable) ===== */
+.video-card{
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:12px;
+  padding:.6rem;
+  box-shadow:0 1px 2px rgba(0,0,0,.05);
+  display:flex;
+  flex-direction:column;
+  gap:.4rem;
+}
+.video-wrap{
+  position:relative;
+  width:100%;
+  aspect-ratio:16 / 9;   /* mantiene 16:9, moderno */
+  background:#000;
+  border-radius:10px;
+  overflow:hidden;
+}
+.video-wrap iframe{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  border:0;
+}
+
+/* ===== Página Actividad: texto + video a dos columnas ===== */
+.pg-actividad .grid-2{
+  display:grid;
+  grid-template-columns: 1fr 420px;   /* izquierda texto, derecha video */
+  gap:1.5rem;
+  align-items:start;
+}
+@media (max-width:900px){
+  .pg-actividad .grid-2{ grid-template-columns:1fr; }
+}
